@@ -7,6 +7,7 @@ const app = express();
 app.use(cors());
 // Enable parsing of JSON data
 app.use(bodyParser.json());
+mongoose.set('strictQuery', true);
 
 mongoose.connect("mongodb+srv://user123:kedarv.55@cluster0.gz6nqkr.mongodb.net/FormDb?retryWrites=true&w=majority", {
   useNewUrlParser: true,
